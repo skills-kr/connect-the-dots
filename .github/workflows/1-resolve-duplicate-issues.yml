@@ -1,4 +1,4 @@
-name: Step 1, Resolve duplicate issues
+name: Step 1, 중복 이슈 해결
 
 # This step listens for the learner creating or editing an issue comment.
 # This workflow updates from step 1 to step 2.
@@ -19,7 +19,7 @@ permissions:
 jobs:
   # Get the current step to only run the main job when the learner is on the same step.
   get_current_step:
-    name: Check current step number
+    name: 현재 단계 번호 확인
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,7 +31,7 @@ jobs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 
   on_duplicate_issue_closed:
-    name: Check if duplicate issue is marked as duplicate
+    name: 중복 이슈가 중복으로 표시되었는지 확인
     needs: get_current_step
 
     # We will only run this action when:
@@ -53,26 +53,46 @@ jobs:
         with:
           fetch-depth: 0 # Let's get all the branches.
 
-      - name: Dump GitHub comment context
+      - name: GitHub 댓글 컨텍스트 덤프
         id: github_comment_step
         env:
           COMMENT_CONTEXT: ${{ toJSON(github.event.comment) }}
         run: echo "$COMMENT_CONTEXT"
 
-      - name: Dump GitHub issue context
+      - name: GitHub 이슈 컨텍스트 덤프
         id: github_issue_step
         env:
           ISSUE_CONTEXT: ${{ toJSON(github.event.issue) }}
         run: echo "$ISSUE_CONTEXT"
 
-      - name: Check if commented issue is closed and marked as duplicate
+      - name: 이슈가 닫혔고 중복으로 표시되었는지 확인
         if: ${{ contains(github.event.comment.body, 'Duplicate of') && (github.event.issue.state == 'closed')}}
         run: echo 'Duplicate issue closed'
 
       # Update README from step 1 to step 2.
-      - name: Update to step 2
+      - name: 2단계로 업데이트
         uses: skills/action-update-step@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           from_step: 1
           to_step: 2
+
+      - name: Workshop Tracker에 단계 보고
+        if: success()
+        continue-on-error: true
+        run: |
+          SESSION_ID=$(jq -r '.sessionId' .github/workshop-config.json)
+          TRACK=$(jq -r '.track' .github/workshop-config.json)
+          API_URL=$(jq -r '.apiUrl' .github/workshop-config.json)
+          curl -s -X POST "$API_URL" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "sessionId": "'"$SESSION_ID"'",
+              "type": "step",
+              "step": 1,
+              "description": "중복 이슈 해결",
+              "username": "'"$GITHUB_ACTOR"'",
+              "repo": "'"$GITHUB_REPOSITORY"'",
+              "track": "'"$TRACK"'",
+              "runId": "'"$GITHUB_RUN_ID"'"
+            }' || true

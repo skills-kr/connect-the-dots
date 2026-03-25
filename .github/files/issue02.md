@@ -1,15 +1,15 @@
-# GIVEN:
+# 전제 조건:
 
-- User opens \_sidebar.md file
+- 사용자가 \_sidebar.md 파일을 엽니다
 
-# WHEN:
+# 상황:
 
-- User navigates by clicking on [Documentation references] link
+- 사용자가 [Documentation references] 링크를 클릭하여 이동합니다
 
-# THEN (EXPECTED):
+# 예상 결과:
 
-- [Documentation references] page must be open successfully
+- [Documentation references] 페이지가 성공적으로 열려야 합니다
 
-# OBSERVED:
+# 관찰된 결과:
 
-- File not found error OR GitHub reports HTTP 404 error (file not found)
+- 파일을 찾을 수 없는 오류 또는 GitHub에서 HTTP 404 오류 (파일을 찾을 수 없음) 발생

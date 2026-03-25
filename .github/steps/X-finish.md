@@ -3,29 +3,29 @@
   Review what we learned, ask for feedback, provide next steps.
 -->
 
-## Finish
+## 완료
 
-_Congratulations friend, you've completed this course! :tada:_
+_축하합니다, 이 과정을 완료하셨습니다! :tada:_
 
 <img src="https://octodex.github.com/images/collabocats.jpg" alt=celebrate width=300 align=right>
 
-In this course, you've learned a lot about finding and sharing information. Within a GitHub repository, you can find history about what changes were made, and more importantly, _why_ changes were made.
+이 과정에서 정보를 찾고 공유하는 것에 대해 많이 배웠습니다. GitHub 저장소 내에서 어떤 변경이 이루어졌는지의 히스토리를 찾을 수 있고, 더 중요한 것은 변경이 _왜_ 이루어졌는지를 알 수 있습니다.
 
-### What's next?
+### 다음 단계
 
-You can enable GitHub Pages and see `docs/index.html` as a website!
+GitHub Pages를 활성화하여 `docs/index.html`을 웹사이트로 볼 수 있습니다!
 
-1. Replace `USERNAME` with your GitHub username and `REPONAME` with your GitHub repository name in `docs/index.html`.
-1. Under your repository name at the upper right, click :gear: **Settings**.
-1. Then on the lower left, click **Pages**.
-1. In the **GitHub Pages** section, select `main` in the **Select branch** drop-down menu and `/docs` in the **Select folder** drop-down menu.
-1. Click the **Save** button.
-1. Wait about 30 seconds then refresh the page. When you see "Your site is published at ...," you can click on the link to see your published site.
+1. `docs/index.html`에서 `USERNAME`을 GitHub 사용자명으로, `REPONAME`을 GitHub 저장소 이름으로 교체합니다.
+1. 저장소 이름 우측 상단에서 :gear: **Settings**를 클릭합니다.
+1. 그런 다음 왼쪽 하단에서 **Pages**를 클릭합니다.
+1. **GitHub Pages** 섹션에서 **Select branch** 드롭다운 메뉴에서 `main`을, **Select folder** 드롭다운 메뉴에서 `/docs`를 선택합니다.
+1. **Save** 버튼을 클릭합니다.
+1. 약 30초 기다린 후 페이지를 새로고침합니다. "Your site is published at ..."이 표시되면 링크를 클릭하여 게시된 사이트를 확인할 수 있습니다.
 
-Check out these resources to learn more or get involved:
+더 알아보거나 참여하려면 다음 리소스를 확인하세요:
 
-- Are you a student? Check out the [Student Developer Pack](https://education.github.com/pack).
-- We'd love to hear what you thought of this course in our [discussion board](https://github.com/orgs/skills/discussions/categories/connect-the-dots).
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
+- 학생이신가요? [Student Developer Pack](https://education.github.com/pack)을 확인하세요.
+- 이 과정에 대한 의견을 [토론 게시판](https://github.com/orgs/skills/discussions/categories/connect-the-dots)에서 들려주세요.
+- [다른 GitHub Skills 과정 수강하기](https://github.com/skills).
+- [GitHub 시작하기 문서 읽기](https://docs.github.com/en/get-started).
+- 기여할 프로젝트를 찾으려면 [GitHub Explore](https://github.com/explore)를 확인하세요.

@@ -6,24 +6,24 @@
   Encourage users to open new tabs for steps!
 -->
 
-## Step 1: Resolve duplicate issues
+## 1단계: 중복 이슈 해결하기
 
-_Welcome to the course :tada:_
+_과정에 오신 것을 환영합니다 :tada:_
 
-GitHub has special capabilities to help reference other information on GitHub. For example, when you reference another issue or pull request by number, that number will be hyperlinked. At the same time, a cross-reference is created in the linked issue or pull request. This two-way reference helps people track the relationship of information across GitHub.
+GitHub에는 다른 정보를 참조하는 특별한 기능이 있습니다. 예를 들어, 다른 이슈나 풀 리퀘스트를 번호로 참조하면 해당 번호가 하이퍼링크로 변환됩니다. 동시에 참조된 이슈나 풀 리퀘스트에 교차 참조(cross-reference)가 생성됩니다. 이 양방향 참조는 GitHub 전체에서 정보의 관계를 추적하는 데 도움이 됩니다.
 
-![a screenshot of an issue linking to a PR, and a PR with a cross-reference to the issue](https://user-images.githubusercontent.com/6351798/172456846-2daec570-08b0-4ffa-a7cb-41acc50b836e.png)
+![이슈에서 PR을 연결하고, PR에서 이슈로의 교차 참조가 표시된 스크린샷](https://user-images.githubusercontent.com/6351798/172456846-2daec570-08b0-4ffa-a7cb-41acc50b836e.png)
 
-With collaboration from multiple team members, sometimes issues can be duplicated. In the above example, the new issue `#8346` is a duplicate of a previous issue `#8249`. The cross-reference ability allows you to track these duplications and close issues when appropriate.
+여러 팀원이 협업하다 보면 이슈가 중복될 수 있습니다. 위 예시에서 새 이슈 `#8346`은 이전 이슈 `#8249`의 중복입니다. 교차 참조 기능을 통해 이러한 중복을 추적하고 적절하게 이슈를 닫을 수 있습니다.
 
-### Creating references
+### 참조 만들기
 
-When you link to another issue, a reference within GitHub is automatically created. In fact, you don't even need to include the full link. If you were to type `#5` within a comment, that would turn into a link to issue or pull request number 5.
+다른 이슈에 연결하면 GitHub 내에서 자동으로 참조가 생성됩니다. 사실 전체 링크를 포함하지 않아도 됩니다. 댓글에 `#5`를 입력하면 이슈 또는 풀 리퀘스트 번호 5로 연결되는 링크로 변환됩니다.
 
-When you want to create a crosslink, start typing the title of an issue or pull request directly after you type the `#` symbol. GitHub will suggest issues or pull requests that will link to the right place. To learn even more, check out the [Autolinked References and URLs](https://docs.github.com/en/articles/autolinked-references-and-urls) article.
+교차 링크를 만들려면 `#` 기호 바로 뒤에 이슈나 풀 리퀘스트 제목을 입력하세요. GitHub가 올바른 위치로 연결될 이슈나 풀 리퀘스트를 추천합니다. 더 자세한 내용은 [자동 링크 참조 및 URL](https://docs.github.com/en/articles/autolinked-references-and-urls) 문서를 확인하세요.
 
-### :keyboard: Activity: Find and close the cross-linked issue
+### :keyboard: 활동: 교차 연결된 이슈 찾아서 닫기
 
-1. Navigate to the issue #1 (Welcome)
-2. Type "Duplicate of #2" as a comment and close issue #1
-3. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+1. 이슈 #1 (Welcome)로 이동합니다
+2. "Duplicate of #2"를 댓글로 입력하고 이슈 #1을 닫습니다
+3. 약 20초 기다린 후 이 페이지(지침을 따르고 있는 페이지)를 새로고침합니다. [GitHub Actions](https://docs.github.com/en/actions)가 자동으로 다음 단계로 업데이트합니다.

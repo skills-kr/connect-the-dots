@@ -1,4 +1,4 @@
-name: Step 0, Welcome
+name: Step 0, 환영
 
 # This step listens for the learner pushing a commit to `main`.
 # This workflow updates from step 0 to step 1.
@@ -19,7 +19,7 @@ permissions:
 jobs:
   # Get the current step to only run the main job when the learner is on the same step.
   get_current_step:
-    name: Check current step number
+    name: 현재 단계 번호 확인
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,7 +31,7 @@ jobs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 
   on_start:
-    name: On start
+    name: 시작 시
     needs: get_current_step
 
     # We will only run this action when:
@@ -55,7 +55,7 @@ jobs:
 
       # This is required to establish related issues
       # after being created from the template repository.
-      - name: Prepare issues
+      - name: 이슈 준비
         run: |
           echo "Make sure we are on step 0"
           if [ "$(cat .github/steps/-step.txt)" != 0 ]
@@ -72,7 +72,7 @@ jobs:
 
       # This is required to create a relevant history for docs/_sidebar.md
       # after being created from the template repository.
-      - name: Prepare files history
+      - name: 파일 히스토리 준비
         run: |
           echo "Make sure we are on step 0"
           if [ "$(cat .github/steps/-step.txt)" != 0 ]
@@ -102,9 +102,29 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Update README from step 0 to step 1.
-      - name: Update to step 1
+      - name: 1단계로 업데이트
         uses: skills/action-update-step@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           from_step: 0
           to_step: 1
+
+      - name: Workshop Tracker에 시작 보고
+        if: success()
+        continue-on-error: true
+        run: |
+          SESSION_ID=$(jq -r '.sessionId' .github/workshop-config.json)
+          TRACK=$(jq -r '.track' .github/workshop-config.json)
+          API_URL=$(jq -r '.apiUrl' .github/workshop-config.json)
+          curl -s -X POST "$API_URL" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "sessionId": "'"$SESSION_ID"'",
+              "type": "start",
+              "step": 0,
+              "description": "실습 시작",
+              "username": "'"$GITHUB_ACTOR"'",
+              "repo": "'"$GITHUB_REPOSITORY"'",
+              "track": "'"$TRACK"'",
+              "runId": "'"$GITHUB_RUN_ID"'"
+            }' || true

@@ -4,30 +4,30 @@
   Define terms and link to docs.github.com.
 -->
 
-## Step 2: Find a commit in history
+## 2단계: 히스토리에서 커밋 찾기
 
-_Thanks for the duplicate note :wave:_
+_중복 표시를 해주셔서 감사합니다 :wave:_
 
-An important part of version control is the ability to look into the past. By using `git blame`, and finding the story behind a commit, we're able to do more than _blame_ people for code. We're able to see the story around why a commit was made. What is the associated pull request? Who approved the pull request? What tests were run on that commit before it was merged?
+버전 관리의 중요한 부분은 과거를 되돌아볼 수 있는 능력입니다. `git blame`을 사용하고 커밋 뒤에 숨겨진 이야기를 찾으면, 단순히 코드에 대해 누군가를 _탓하는_ 것 이상의 일을 할 수 있습니다. 커밋이 왜 만들어졌는지 그 이야기를 볼 수 있습니다. 관련된 풀 리퀘스트는 무엇인가? 누가 풀 리퀘스트를 승인했는가? 머지되기 전에 해당 커밋에 어떤 테스트가 실행되었는가?
 
-The obvious reason to find things in history is to know about the history. With issues and pull requests, we see a more complete story about the history, not just the bare minimum.
+히스토리에서 정보를 찾는 분명한 이유는 히스토리를 알기 위해서입니다. 이슈와 풀 리퀘스트를 통해 우리는 최소한의 정보가 아닌 더 완전한 히스토리 이야기를 볼 수 있습니다.
 
-### What's `git blame`?
+### `git blame`이란?
 
-`git blame` is a Git functionality that shows what revision and author last modified each line of a file. Information like who made a commit, when, and even why can be found this way. If you aren't sure who introduced certain changes to a file, you can use `git blame` to find out. While `git blame` sounds rather accusatory, this can be used to understand the context around decisions.
+`git blame`은 파일의 각 줄을 마지막으로 수정한 리비전과 작성자를 보여주는 Git 기능입니다. 누가 커밋했는지, 언제, 심지어 왜 했는지까지 이 방법으로 알 수 있습니다. 특정 변경을 누가 도입했는지 확실하지 않다면 `git blame`을 사용하여 찾을 수 있습니다. `git blame`이라는 이름이 다소 비난하는 것처럼 들리지만, 결정의 맥락을 이해하는 데 사용할 수 있습니다.
 
-### What's a Secure Hash Algorithm (SHA)?
+### 보안 해시 알고리즘(SHA)이란?
 
-A SHA is a reference to a specific object. In this case, it's a reference to a commit. On GitHub, you can look at a specific commit to see the changes introduced, by whom, and if they were a part of a pull request.
+SHA는 특정 객체에 대한 참조입니다. 이 경우에는 커밋에 대한 참조입니다. GitHub에서 특정 커밋을 보면 누가 도입한 변경인지, 풀 리퀘스트의 일부였는지 확인할 수 있습니다.
 
-### :keyboard: Activity: Find commit in history
+### :keyboard: 활동: 히스토리에서 커밋 찾기
 
-1. Navigate to the Code tab of your repository
-   - _Tip: you may have previously created your repository in a new tab_
-2. Click `docs` to navigate into the `/docs` directory
-3. Click `_sidebar.md` to view the file
-4. On the top of the file, click **Blame** to see the details of the most recent revision
-5. Click the commit message, `add sidebar to documentation` to see the commit details
-6. Copy the first seven characters of the SHA (the first 7 characters of the 40 character hexadecimal string listed after `commit`)
-7. Comment on issue #2 by adding the SHA from step 6 as a comment text and click on "Comment" button
-8. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+1. 저장소의 Code 탭으로 이동합니다
+   - _팁: 이전에 새 탭에서 저장소를 만들었을 수 있습니다_
+2. `docs`를 클릭하여 `/docs` 디렉터리로 이동합니다
+3. `_sidebar.md`를 클릭하여 파일을 확인합니다
+4. 파일 상단에서 **Blame**을 클릭하여 최근 리비전의 세부 정보를 확인합니다
+5. 커밋 메시지인 `add sidebar to documentation`을 클릭하여 커밋 세부 정보를 확인합니다
+6. SHA의 처음 7자를 복사합니다 (`commit` 뒤에 나열된 40자 16진수 문자열의 처음 7자)
+7. 이슈 #2에 6단계에서 복사한 SHA를 댓글 텍스트로 추가하고 "Comment" 버튼을 클릭합니다
+8. 약 20초 기다린 후 이 페이지(지침을 따르고 있는 페이지)를 새로고침합니다. [GitHub Actions](https://docs.github.com/en/actions)가 자동으로 다음 단계로 업데이트합니다.
