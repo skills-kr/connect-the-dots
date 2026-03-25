@@ -7,7 +7,7 @@
   Add your open source license, GitHub uses MIT license.
 -->
 
-# GitHub 저장소에서 점 연결하기
+# GitHub 저장소에서 단서 연결하기
 
 _저장소를 탐색할 때 유용한 팁들._
 
