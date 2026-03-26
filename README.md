@@ -29,7 +29,7 @@ _저장소를 탐색할 때 유용한 팁들._
   - 히스토리를 검색하여 맥락 파악하기.
   - GitHub 내에서 연결을 만들어 다른 사람들이 정보를 쉽게 찾도록 돕기.
 - **만들게 될 것**: 기존 커밋, 중복 이슈, 수정할 콘텐츠 결함이 있는 저장소.
-- **사전 요구 사항**: 이 과정을 수강하기 전에 GitHub Docs의 [GitHub 빠른 시작](https://docs.github.com/en/get-started/quickstart) 소개와 GitHub Skills의 [GitHub 소개](https://github.com/skills/introduction-to-github) 과정을 먼저 살펴보세요.
+- **사전 요구 사항**: 이 과정을 수강하기 전에 GitHub Docs의 [GitHub 빠른 시작](https://docs.github.com/en/get-started/quickstart) 소개와 GitHub Skills의 [GitHub 소개](https://github.com/skills-kr/introduction-to-github) 과정을 먼저 살펴보세요.
 - **소요 시간**: 이 과정은 완료까지 15분 미만 소요됩니다.
 
 이 과정에서 다음을 수행합니다:
